@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Buy films from all over the world and watch anywhere">
+        <title>Square Eyes | Buy your film</title>
+        <link rel="icon" type="image/png" sizes="32x14" href="/assets/SquareEyesLogoBlueFavIcon.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon_io/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon_io/android-chrome-192x192.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto&family=Source+Serif+4:opsz,wght@8..60,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/index.css">
+        <script src="https://kit.fontawesome.com/2c5c2a6dff.js" crossorigin="anonymous"></script>
+        <script type="module" src="../scripts/displayCart.mjs"></script>
+    </head>
+    <body>
+        <div class="loader">Loading page</div>
+        <header>
+            <section class="header transparent-header">
+                <div class="header__items header__items-light">
+                    <!-- <div class="header-left">
+                        <div class="hide-on-desktop">
+                            <input type="checkbox" id="menu-checkbox">
+                            <label for="menu-checkbox" class="icons-header header__items-light"><i tabindex="0" class="fa-solid fa-bars"></i></label>
+                            <nav class="nav-mobile"> 
+                                <h2>Film Categories</h2>           
+                                <a href="../html/filmlist.html">Action</a>
+                                <a href="../html/filmlist.html">Comedy</a>
+                                <a href="../html/filmlist.html">Drama</a>
+                                <a href="../html/filmlist.html">Documentaries</a>
+                                <a href="../html/filmlist.html">Fantasy & Sci-fi</a>
+                                <a href="../html/filmlist.html">Horror</a>
+                                <a href="../html/filmlist.html">Kids</a>
+                                <a href="../html/filmlist.html">A-Z</a>
+                                <a href="../html/filmlist.html">Award winning films</a>
+                                <a href="../html/filmlist.html">New Directors</a>
+                                <a href="../html/filmlist.html">Directors</a>
+                                <a href="../html/filmlist.html">New films</a>
+                                <a href="../html/filmlist.html">Choose a film year</a>
+                                <span class="ab-contact">
+                                    <a href="../html/about.html">About Square Eyes</a>
+                                    <a href="../html/contact.html">Contact Us</a>
+                                </span>
+                            </nav>
+                        </div>
+                        <div class="hide-on-mobile">
+                            <input type="checkbox" id="dekstop-menu-checkbox">
+                            <label tabindex="0" class="desktop-label" for="dekstop-menu-checkbox">Film Categories</label>
+                            <nav class="nav-dektop">         
+                                <a href="../html/filmlist.html">Action</a>
+                                <a href="../html/filmlist.html">Comedy</a>
+                                <a href="../html/filmlist.html">Drama</a>
+                                <a href="../html/filmlist.html">Documentaries</a>
+                                <a href="../html/filmlist.html">Fantasy & Sci-fi</a>
+                                <a href="../html/filmlist.html">Horror</a>
+                                <a href="../html/filmlist.html">Kids</a>
+                                <a href="../html/filmlist.html">A-Z</a>
+                            </nav>
+                        </div>   
+                    </div> -->
+                    <div class="header-center">
+                        <a href="../index.html"><img src="../assets/logo/SquareEyes_Logo_light-light.png" class="logo" alt="Square Eyes logo"></a>
+                    </div>
+                    <div class="header-right">
+                        <!-- <div tabindex="0" aria-label="Search"><i class="icons-header fa-solid fa-magnifying-glass"></i></div>
+                        <div tabindex="0" aria-label="User"><i class="icons-header fa-regular fa-user"></i></div> -->
+                        <a class="icons-header" href="checkout.html" tabindex="0" aria-label="Cart"><i class="fa-solid fa-basket-shopping"></i></a>                        
+                    </div> 
+                </div>
+            </section>
+        </header>
+        <main>
+            <h1>Checkout</h1>
+
+            <div class="cart-items">
+            </div>
+            <div class="cart-tot">
+                <span class="cart-total-title">Total</span>
+                <span class="cart-total-price"></span>
+            </div>
+            
+            <form action="./checkoutsuccess.html">
+                <div class="form-wrapper-grid">
+                    <div class="form-wide name">
+                        <label for="name">Name</label>
+                        <input class="focus" type="text" id="name" name="name">
+                    </div>
+                    <div class="form-wide e-mail">
+                        <label for="email">E-mail</label>
+                        <input class="focus" type="text" name="email" id="email">
+                    </div>
+                    <div class="form-wide ccnumber">
+                        <label for="ccnumber">Credit Card Number</label>
+                        <input class="focus" type="text" id="ccnumber" name="ccnumber">
+                    </div>
+                    <div class="form-short mmyy">
+                        <label for="mmyy">mm/yy</label>
+                        <input class="focus" type="text" name="mmyy" id="mmyy" class="short">
+                    </div>
+                    <div class="form-short cvc">
+                        <label for="cvc">cvc</label>
+                        <input class="focus" type="text" name="cvc" id="cvc" class="short">
+                    </div>
+                </div>
+            </form>
+            <div class="center-item">
+                <button class="cta btn-purchase">Buy now</button>
+            </div>
+            <div class="center-item">
+                <a href="../index.html" class="cta">Back</a>
+            </div>
+        </main>
+        <footer class="hide-on-mobile">
+            <nav class="footer-nav">
+                <div class="footer-nav-item left">
+                    <a href="../index.html"><img src="../assets/logo/SquareEyes_Logo_dark.png" class="logo" alt="Square Eyes logo"></a>
+                </div>
+                <div class="footer-nav-item right">
+                    <a href="contact.html">Contact Us</a>
+                    <a href="about.html">About Square Eyes</a>
+                </div>
+            </nav>
+        </footer>
+
+        <a href=".filpage.html">VIEW FILM INFO</a>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+/* @font-face {
+    font-family: "Inter";
+    src: url("/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf") format("opentype");
+} */
+
+@font-face {
+    font-family: "Source Serif 4";
+    src: url("/fonts/Source_Serif_4/static/SourceSerif4-Medium.ttf") format("opentype");
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+p {
+    font-size: .9rem;
+    text-align: left;
+}
+

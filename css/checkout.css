@@ -1,0 +1,95 @@
+.content_checkout {
+    margin: 2rem 1rem;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.content_checkout > div > img {
+    max-width: 78%;
+    margin: 1rem auto;
+    display: flex;
+}
+
+.mobile-h1 {
+    font-size: 1.7rem;
+}
+
+.mobile-p {
+    font-size: 1.2rem;
+}
+
+.mobile-p-xs {
+    font-size: .8rem;
+}
+
+.form-wrapper-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin: auto;
+    max-width: 80%;
+    gap: .4rem;
+    padding-top: 4rem;
+}
+
+.form-wide {
+    grid-column: 1 / 5;
+    width: 100%;
+}
+
+.form-short {
+    grid-row: 4;
+}
+
+.name {
+    grid-row: 1;
+}
+
+.email {
+    grid-row: 2;
+}
+
+.ccnumber {
+    grid-row: 3;
+}
+
+.mmyy {
+    grid-column: 1;
+}
+
+.cvc {
+    grid-column: 2;
+}
+
+.form-wrapper-grid > div > * {
+    display: block;
+} 
+
+.form-wrapper-grid > div > label {
+    text-align: left;
+}
+
+.form-wide > input {
+    width: 95%;
+}
+
+.form-short > input {
+    width: 79%;
+}
+
+.cart-items {
+    padding: 3rem;
+}
+    
+.cart-item-image {
+    height: 200px;
+}
+
+.price-discount {
+    color: green;
+}
+
+.cart-tot {
+    padding-left: 3rem;
+}

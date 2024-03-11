@@ -1,0 +1,283 @@
+@media only screen and (max-width: 799px) {
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .button-box {
+        background-color: var(--bg-color-blue);
+        padding: .6rem;
+    }
+
+    .cta-home {
+        font-size: .8rem;
+        padding: .5rem 4rem;
+        max-width: 5rem;
+        margin: auto;
+    }
+
+    .cta {
+        padding: .6rem 2rem;
+        font-size: 0.6rem;
+    }
+
+    .content {
+        margin: 2rem 1rem;
+    }
+
+    .filmpage-image {
+        max-width: 100%;
+    }
+
+}
+
+
+
+@media only screen and (min-width: 800px) {
+
+    h1 {
+        font-size: 2.7rem;
+    }
+    
+    h2 {
+        font-size: 1.9rem;
+    }
+    
+    h3 {
+        font-size: 1.6rem;
+    }
+    
+    p {
+        font-size: 1.1rem;
+        text-align: left;
+    }
+
+    .hide-on-desktop{
+        display: none;
+    }
+
+    header a:hover, 
+    header a:focus {
+    font-weight: bold;
+    }
+
+    .banner {
+        min-height: 90vh;
+    }
+
+    .banner-h1 {
+        margin-bottom: .5rem;
+        font-size: 4rem;
+        text-align: center;
+    }
+    
+    .banner-h2 {
+        margin: 1rem 1rem 3rem 1rem;
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .serif {
+        font-family: "Source Serif 4"; 
+        margin: 0rem 0rem 1rem 0rem;
+    }
+    
+    .serif-tight {
+        font-size: 2rem;
+    }
+
+    .cta-home {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+    }
+
+    .position-cta {
+        display: flex;
+        margin: 20% auto auto 10%;
+        max-width: 1440px;
+    }
+
+
+
+    /*image scroller*/
+
+    .film-selection__heading {
+        font-size: 1.6rem;
+    }
+
+    .image-scroller {
+        grid-auto-columns: 47%;
+    }
+
+    .film-selection-content {
+        margin: 2rem;
+        padding: 0;
+    }
+    
+    .film-scroller {
+        font-size: 2.6rem;
+        text-shadow: 1px 1px 10px rgba(0, 0, 0);
+        margin-bottom: 0rem;
+    
+    }
+    
+    .director-scroller {
+        font-size: 1.2rem;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0);
+        margin: .3rem 0 .2rem 0;
+    }
+
+    /*filmlist*/
+
+    .banner-horror{
+        min-height: 18rem;
+    }
+
+    .banner-horror__content {
+        position: relative;
+        top: 12rem;
+    }
+
+    .horror-h1 {
+        font-size: 3.3rem;
+    }
+
+    .filmlist-horror {
+        margin: auto;
+    }
+
+
+    /*filmpage*/
+
+    .filmpage-content {
+        margin: auto auto 10rem auto;
+    }
+    .film-grid {
+        display: grid;
+        grid-template-columns: 50% 1fr;
+        gap: 1rem;
+        grid-auto-rows: minmax(auto, auto);
+        margin: auto;
+        max-width: 1440px;
+    }
+
+    
+    .grid-title {
+        grid-column: 1/-1;
+        grid-row: 1;
+    }
+    
+    .grid-details {
+        grid-column: 1/-1;
+        grid-row: 2;
+    }
+    
+    .grid-icons {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    
+    .grid-synopsis {
+        grid-column: 1;
+        grid-row: 4;
+    }
+    
+    .grid-cta {
+        grid-column: 2;
+        grid-row: 3;
+    }
+    
+    .grid-castcrew {
+        grid-column: 2;
+        grid-row: 4;
+    }
+
+    .title {
+        margin: 0;
+        padding: 1rem;
+        text-align: left;
+        font-size: 3.5rem;
+    }
+
+    .details {
+        display: inline-flex;
+        gap: 1.5rem;
+        padding: 0rem 1rem;
+        font-size: 1rem;
+    }
+
+    .filmpage-icons {
+        gap: 2rem;
+        font-size: 1.5rem;
+    }
+    
+   .icons-header {
+        padding: 1rem 1rem;
+        font-size: 1.4rem;
+    }
+    
+    .synopsis {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        padding: 0;
+        margin: .8rem 0 0 1rem;
+    }
+    
+    .filmpage-button {
+        margin: 1rem;
+    }
+    
+    .castcrew {
+        font-size: 1rem;
+        line-height: 1.4rem;
+        margin: 0 auto 0 2rem;
+        padding: 0;
+    }
+    
+    .castcrew > h3 {
+        padding: 0;
+        margin: .8rem 0 .5rem 0;
+    }
+    
+    .castcrew > p {
+        margin: 0 auto 1rem 0;
+    }
+
+    /*checkout*/
+    .form-wrapper-grid {
+        max-width: 20rem;
+    }
+
+    .content_checkout {
+        margin: 2rem auto;
+        max-width: 450px;
+    }
+
+
+
+
+    /*contact and about*/
+    
+    .form-wrapper {
+        max-width: 100%;
+    }
+
+    .contact-content {
+        max-width: 400px;
+        margin: 3rem auto;
+        margin-bottom: 5rem;
+    }
+
+    .content__heading {
+        text-align: left;
+    }
+
+    .content {
+        margin: 3rem auto 6rem auto;
+        max-width: 850px;
+    }
+
+    .h2 {
+        margin-top: 3rem;
+    }
+}

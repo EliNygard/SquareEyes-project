@@ -1,0 +1,21 @@
+/*fundamental code*/
+@import url("reset.css");
+@import url("imports/variables.css");
+@import url("imports/colors.css");
+@import url("imports/fonts.css");
+
+/*component specific code*/
+@import url("banner.css");
+@import url("buttons.css");
+@import url("checkout.css");
+@import url("checkoutsuccess.css");
+@import url("contact-about.css");
+@import url("dropdown.css");
+@import url("filmlist.css");
+@import url("filmpage.css");
+@import url("footer.css");
+@import url("header.css");
+@import url("image_scroller.css");
+
+/*media*/
+@import url("media.css");

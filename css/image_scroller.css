@@ -1,0 +1,86 @@
+.film-selection-container {
+    max-width: 1440px;
+    margin: auto;
+}
+
+.image-scroller {
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+    grid-auto-columns: 46%;
+    padding: 1rem;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+}
+
+.img-element {
+    background: var(--theme-color-light);
+    position: relative; 
+}
+
+.film-image {
+    background-color: transparent;
+    transition-property: background-color;
+    transition-duration: 1s;
+}
+
+.img-element > a > img:hover {
+    background-color: var(--bg-color-hover);
+    z-index: 10;
+}
+
+.film-selection-content {
+    position: absolute;
+    bottom: 0;
+    color: var(--theme-color-light);
+    z-index: 5;
+    inline-size: 100%;
+    margin: .5rem;
+    padding: 0;
+}
+
+.film-scroller {
+    font-size: .7rem;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0);
+    margin-bottom: 0rem;
+}
+
+.director-scroller {
+    font-size: .5rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0);
+    margin: .3rem 0 .2rem 0;
+}
+
+.img-element > a > img {
+    inline-size: 100%;
+    aspect-ratio: 16 / 8;
+    object-fit: cover;
+}
+
+.snaps-inline {
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 1rem;
+}
+
+.snaps-inline > * {     /*star=all the direct children*/
+    scroll-snap-align: start;
+}
+
+.film-selection__heading {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--theme-color-blue);
+    padding: 1rem 1rem 0rem 1rem;
+    margin: auto;
+}
+
+
+
+
+/* fra videoen om scroller. er dette over tittelen?
+.container {
+    inline-size: min(100% - 4rem, 70rem);
+    margin-inline: auto;
+}
+
+

@@ -1,0 +1,143 @@
+.filmpage_content {
+    max-width: 1440px;
+    margin: auto;
+}
+
+.film-page-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0;
+}
+
+.filmpage_content > div > img {
+    max-width: 100%;
+}
+
+.film-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+    grid-auto-rows: minmax(auto, auto);
+    margin: auto;
+    max-width: 1440px;
+}
+
+.grid-title {
+    grid-column: 1/4;
+    grid-row: 1;
+}
+
+.grid-details {
+    grid-column: 1/4;
+    grid-row: 2;
+}
+
+.grid-icons {
+    grid-column: 3;
+    grid-row: 3;
+    display: flex;
+}
+
+.grid-synopsis {
+    grid-column: 1/4;
+    grid-row: 4;
+}
+
+.grid-cta {
+    grid-column: 1/3;
+    grid-row: 3;
+}
+
+.grid-castcrew {
+    grid-column: 1/4;
+    grid-row: 5;
+}
+
+.title {
+    padding: 0;
+    text-align: left;
+    font-size: 1.5rem;
+    margin: 1rem 1rem 0rem 1rem;
+}
+
+.details {
+    display: inline-flex;
+    gap: 1.5rem;
+    padding: 0rem 1rem;
+    font-size: .6rem;
+}
+
+.filmpage-icons {
+    display: inline-flex;
+    gap: 2rem;
+    justify-content: end;
+    align-items: center;
+    padding: 1rem 1rem;
+    color: var(--theme-color-accent);   
+}
+
+.synopsis {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    margin: 1rem;
+}
+
+.synopsis > p {
+    margin: 0;
+    padding: 0;
+}
+
+.filmpage-button {
+    margin: 0;
+}
+
+.castcrew {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    margin: 1rem;
+}
+
+.castcrew > h3 {
+    padding: .8rem 0 .2rem 0;
+    margin: 0;
+}
+
+.castcrew > p {
+    margin: 0;
+}
+
+.explore-container {
+    padding-bottom: 5rem;
+}
+
+.explore-flex {
+    display: inline-flex;
+    padding: 1rem 1rem 0rem 1rem;
+}
+
+.explore-items {
+    max-width: 320px;
+    position: relative;
+    margin: auto;
+}
+
+.explore-items img {
+    height: 174px;
+    width: 320px;
+    object-fit: cover;
+}
+
+
+.added-message {
+    position: fixed;
+    border-radius: 4px;
+    background-color: var(--theme-color-accent);
+    color: var(--theme-color-light);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 10px 75px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}

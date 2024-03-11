@@ -1,0 +1,79 @@
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    padding: 0rem;
+    max-height: 4rem;
+}
+
+.desktop-label {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.light-header {
+    background-color: var(--theme-color-light);
+    position: static;
+}
+
+.transparent-header {
+    background: linear-gradient(180deg, rgba(2,0,36,0.7036064425770308) 5%, rgba(26,58,85,0.6811974789915967) 60%, rgba(0,212,255,0) 100%);
+}
+
+.header__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1.6rem;
+    max-width: 1440px;
+    margin: auto;
+}
+
+.header__items-light {
+    color: var(--theme-color-light);
+}
+
+.header__items-dark {
+    color: var(--theme-color-dark);
+}
+
+.header-right {
+    margin-left: auto;
+    align-content: space-between;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-end;
+}
+
+.header-left {
+    margin-right: auto;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.header-center {
+    display: flex;
+    justify-content: center;
+}
+
+.header-left,
+.header-center,
+.header-right {
+    flex: 1;
+}
+
+.logo {
+    height: 36px;
+    width: auto;  
+}
+
+header nav, h2 {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.icons-header {
+    font-size: 1.2rem;
+}

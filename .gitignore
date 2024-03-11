@@ -1,0 +1,7 @@
+# This is a gitignore file
+# It tells git to ignore certain files or folders
+# You don't need to change this file
+# Don't worry, you will learn about this later!
+
+.DS_Store
+node_modules/

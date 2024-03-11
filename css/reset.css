@@ -1,0 +1,14 @@
+/**, *:before, *:after {
+    box-sizing: inherit;
+}*/
+
+body {
+    box-sizing: border-box;
+    font-family: 'Inter', Verdana, Geneva, Tahoma, sans-serif;
+    font-variant: normal;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+

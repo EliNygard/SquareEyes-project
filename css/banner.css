@@ -1,0 +1,72 @@
+.banner-container {
+    height: 66vh;
+    display: flex;
+}
+
+.banner-test {
+    min-height: 20rem;
+    background-image: url(./assets/banner-horror_matthias-cooper-ObYmRBaMDyg-unsplash.jpg);
+    background-size: cover;
+}
+
+.pos-banner {
+    top: 0;
+    width: 100%;
+}
+
+.banner-test img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner {
+    background-image: url(../assets/banner-image_neom-9f7oiGARGIg-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    min-height: 48vh;
+}
+
+.banner__content {
+    display: flex;
+    top: 5.5rem;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 5rem;
+    padding: .5rem;
+    color: var(--theme-color-light);
+}
+
+.banner-h1, 
+.banner-h2 {
+    margin: 0;
+}
+
+.banner-h1 {
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.banner-h2 {
+    margin: 1rem 1rem 3rem 1rem;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.serif {
+    font-family: "Source Serif 4"; 
+    margin: 0rem 0rem 1rem 0rem;
+}
+
+.serif-tight {
+    margin: 0rem;
+    font-size: 1rem;
+}
+
+.position-cta {
+    display: flex;
+    margin: 6rem auto 2rem auto;
+}

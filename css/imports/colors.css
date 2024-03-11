@@ -1,0 +1,27 @@
+.color-accent {
+    color: var(--theme-color-accent);
+}
+
+.color-light {
+    color: var(--theme-color-light);
+}
+
+.color-dark {
+    color: var(--theme-color-dark);
+}
+
+.color-blue {
+    color: var(--theme-color-blue);
+}
+
+.bg-blue {
+    color: var(--bg-color-blue);
+}
+
+.bg-bluegrey {
+    color: var(--bg-color-bluegrey);
+}
+
+.bg-hover {
+    color: var(--bg-color-hover);
+}

@@ -1,0 +1,91 @@
+.banner-horror {
+    background-image: url(../assets/banner-horror_matthias-cooper-ObYmRBaMDyg-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 7rem;
+}
+
+.banner-horror__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 5rem;
+    color: var(--theme-color-light);
+}
+
+.horror-h1 {
+    font-size: 1.3rem;
+    margin: auto;
+    font-weight: 100;
+}
+
+.filmlist-horror {
+    max-width: 1440px;
+    margin: auto;
+}
+
+.filmlist-horror-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    margin: auto;
+}
+
+.filmlist-horror-item {
+    max-width: 320px;
+    position: relative;
+    margin: auto;
+
+}
+
+.filmlist-horror-item img {
+    height: 174px;
+    width: 320px;
+    object-fit: cover;
+}
+
+.filmlist-horror-content {
+    color: var(--theme-color-light);
+    z-index: 5;
+    position: absolute;
+    bottom: 1rem;
+    padding: 1rem;
+}
+
+.film,
+.director {
+    margin: 0;
+    padding: 0;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0);
+}
+
+.film {
+    font-size: 1.5rem;
+    padding-bottom: .5rem; 
+    text-transform: none; 
+}
+
+.director {
+    font-size: .9rem;  
+}
+
+
+
+/*for js ca film list on home*/
+
+.film-container {
+    width: 350px;
+    display: grid;
+    
+}
+
+.film-item {
+    padding: 1rem;
+}
+
+.film-container img {
+    width: 100%;
+}

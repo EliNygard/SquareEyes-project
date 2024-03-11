@@ -1,0 +1,64 @@
+header nav,
+#menu-checkbox,
+#dekstop-menu-checkbox {
+    display: none;
+}
+
+#menu-checkbox:checked~nav {
+    display: block;
+    z-index: 10;
+}
+
+#dekstop-menu-checkbox:checked~nav {
+    display: flex;
+    padding: 2rem;
+    z-index: 10;
+}
+
+.nav-desktop {
+    text-align: center; 
+    display: block; 
+}
+
+.nav-mobile {
+    text-align: left;
+}
+
+header nav {
+    position: absolute;
+    background-color: var(--bg-color-blue);
+    top: 70px;
+    left: 0px;
+    right: 0px;
+    padding-bottom: 12rem;
+    padding-left: 2rem;
+    width: 100%;
+}
+
+header nav a, header nav div a {
+    display: block;
+    padding-left: 60rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 5px;
+    line-height: 1.4rem;
+    padding-right: 1rem;
+}
+
+header a {
+    color: #fff;
+    padding: 8px;
+}
+
+a {
+    text-decoration: none;
+}
+
+header nav span {
+    padding: 20px;  
+}
+
+header nav span a {
+    font-size: 1.3rem;
+}
+

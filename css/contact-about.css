@@ -1,0 +1,65 @@
+.content {
+    max-width: 600px;
+    margin: 1.5rem 1rem;
+}
+
+.contact-content {
+    max-width: 600px;
+    margin: 1.5rem 1rem;
+}
+
+.content__heading {
+    text-align: left;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+.center-font {
+    text-align: center;
+}
+
+.center-item {
+    display: flex;
+    justify-content: center;
+}
+
+.h2 {
+    color: var(--theme-color-blue);
+    margin-top: 2rem;
+}
+
+
+/* contact form */
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 16rem;
+    margin: 2rem auto 1rem;
+}
+
+input,
+textarea {
+    border: 1px solid #DA4167;
+    border-radius: 3px;
+    margin: 7px 10px 20px 0px;
+    padding: 6px;
+}
+
+label {
+    font-size: 0.8rem;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+.short {
+    width: 50px;
+}
+
+.focus:focus {
+    border: 2px solid #DA4167;
+    outline: none;
+}
+
