@@ -11,11 +11,12 @@
 @import url("checkoutsuccess.css");
 @import url("contact-about.css");
 @import url("dropdown.css");
-@import url("filmlist.css");
+
 @import url("filmpage.css");
 @import url("footer.css");
 @import url("header.css");
 @import url("image_scroller.css");
+@import url("filmlist-home.css");
 
 /*media*/
 @import url("media.css");

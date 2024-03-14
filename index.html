@@ -29,6 +29,8 @@
                             <label for="menu-checkbox" class="icons-header header__items-light"><i tabindex="0" class="fa-solid fa-bars"></i></label>
                             <nav class="nav-mobile"> 
                                 <h2>Film Categories</h2>
+                                <button id="js-genre-action">Action</button>
+                                <h3>Action</h3>
                                          
                                 <a href="./html/filmlist.html">Action</a>
                                 <a href="./html/filmlist.html">Comedy</a>
@@ -52,7 +54,8 @@
                         <div class="hide-on-mobile">
                             <input type="checkbox" id="dekstop-menu-checkbox">
                             <label tabindex="0" class="desktop-label" for="dekstop-menu-checkbox">Film Categories</label>
-                            <nav class="nav-dektop">          
+                            <nav class="nav-dektop">
+                                <button id="js-genre-action">Action</button>          
                                 <a href="./html/filmlist.html">Action</a>
                                 <a href="./html/filmlist.html">Comedy</a>
                                 <a href="./html/filmlist.html">Drama</a>
@@ -92,23 +95,7 @@
             <div class="button-box hide-on-desktop">
                 <h2 role="button" class="cta-home">Create account</h2>
             </div>
-            <!-- <div class="test">
-                <button>All films</button>
-                <button>Action</button>
-                <button>Comedy</button>
-                <button>Drama</button>
-                <button>Horror</button>
-                <button>Kids</button>
-            </div>
-            <select name="genre" id="js-select-genre">
-                <option value="All films">All films</option>
-                <option value="Action">Action</option>
-                <option value="Horror">Horror</option>
-                <option value="Kids">Kids</option>
-                <option value="Comedy">Comedy</option>
-                <option value="Drama">Drama</option>
-            </select>
-            <form>
+            <!-- <form>
                 <input type="text" id="filterinput" placeholder="Search for film title">
             </form> -->
             <details class="sortFilmsByGenre">
@@ -122,46 +109,22 @@
                     <li>Drama</li>
                 </ul>
             </details>
-            <section class="film-container" id="film-container"></section>
+            <section class="film-container" id="js-films-container"></section>
             
             <div class="film-selection-container">
                 <h3 class="film-selection__heading">My films</h3>
                 <div class="image-scroller">
                     <div class="img-element">
-                        <a href="./html/filmpage.html">
-                            <img class="film-image" src="" alt="Film title">
-                            <div class="film-selection-content">
-                                <p class="film-scroller">Film Title</p>
-                                <p class="director-scroller">Director Director</p>
-                            </div>
-                        </a>
+                        
                     </div>
                     <div class="img-element">
-                        <a href="./html/filmpage.html">
-                            <img class="film-image" src="" alt="Film title">
-                            <div class="film-selection-content">
-                                <p class="film-scroller">Film Title</p>
-                                <p class="director-scroller">Director Director</p>
-                            </div>
-                        </a>
+                        
                     </div>
                     <div class="img-element">
-                        <a href="./html/filmpage.html">
-                            <img class="film-image" src="" alt="Film title">
-                            <div class="film-selection-content">
-                                <p class="film-scroller">Film Title</p>
-                                <p class="director-scroller">Director Director</p>
-                            </div>
-                        </a>
+                        
                     </div>
                     <div class="img-element">
-                        <a href="./html/filmpage.html">
-                            <img class="film-image" src="" alt="Film title">
-                            <div class="film-selection-content">
-                                <p class="film-scroller">Film Title</p>
-                                <p class="director-scroller">Director Director</p>
-                            </div>
-                        </a>
+                        
                     </div>
                 </div>
             </div>
