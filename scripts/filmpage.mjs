@@ -2,7 +2,8 @@
 // generate html ✅
 // lag flere div, må matche siden. tittel har egen div osv ✅
 // activate buy film button
-// change price in button if on sale
+// change price in button if on sale ✅
+// create if else statement to determine which button to display
 
 
 const filmItem = JSON.parse(localStorage.getItem("film"));
@@ -72,12 +73,16 @@ function generateFilmPageItemHtml(filmItem) {
     buyFilmButtonOnSale.textContent = `Buy now for ${filmItem.discountedPrice} kr`
     const priceBeforeElement = document.createElement("p")
     priceBeforeElement.classList.add("price-on-sale")
-    priceBeforeElement.textContent = `Before ${filmItem.price} kr. Save ${amountSaved}`
+    const savedAmount = amountSaved(filmItem)
+    priceBeforeElement.textContent = `Before ${filmItem.price} kr. Save ${savedAmount} kr`
 
-    function amountSaved (){
-        const amountSaved = (${filmItem.price}) - (${filmItem.discountedPrice});
-        console.log(amountSaved);
+    function amountSaved (filmItem){
+        const amount = filmItem.price - filmItem.discountedPrice;
+        const savedAmount = amount.toFixed(2)
+        console.log(savedAmount);
+        return savedAmount;
     }
+
 
 
     filmPageContainer.append(imageElement, filmGrid);
