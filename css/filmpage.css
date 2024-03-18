@@ -9,8 +9,8 @@
     margin: 0;
 }
 
-.filmpage_content > div > img {
-    max-width: 100%;
+.filmpage-img {
+    height: 500px;
 }
 
 .film-grid {
@@ -89,6 +89,11 @@
 
 .filmpage-button {
     margin: 0;
+}
+
+.price-on-sale {
+    font-size: .9rem;
+    margin: 16px;
 }
 
 .castcrew {

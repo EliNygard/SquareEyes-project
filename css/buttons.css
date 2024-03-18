@@ -39,3 +39,15 @@
     align-self: flex-end;
     margin: auto;
 }
+
+.cta-on-sale {
+    background-color: green;
+    border-color: green;
+}
+
+.cta-on-sale:hover {
+    background-color: transparent;
+    color: green;
+    border: solid 1px;
+    border-color: green;
+}
