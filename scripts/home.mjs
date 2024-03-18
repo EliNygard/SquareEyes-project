@@ -1,4 +1,4 @@
-import { API_FILM_URL } from "./common/constants.mjs";
+import { API_FILM_URL } from "./common/constantsAPI.mjs";
 import { doFetch } from "./utils/doFetch.mjs";
 
 // get the films ✅

@@ -3,7 +3,9 @@
 // lag flere div, må matche siden. tittel har egen div osv ✅
 // activate buy film button
 // change price in button if on sale ✅
-// create if else statement to determine which button to display
+// create if else statement to determine which button to display ✅
+
+import { amountSaved } from "./utils/amountSaved.mjs";
 
 
 const filmItem = JSON.parse(localStorage.getItem("film"));
@@ -76,14 +78,6 @@ function generateFilmPageItemHtml(filmItem) {
     const savedAmount = amountSaved(filmItem)
     priceBeforeElement.textContent = `Before ${filmItem.price} kr. Save ${savedAmount} kr`
 
-    function amountSaved (filmItem){
-        const amount = filmItem.price - filmItem.discountedPrice;
-        const savedAmount = amount.toFixed(2)
-        console.log(savedAmount);
-        return savedAmount;
-    }
-
-
 
     filmPageContainer.append(imageElement, filmGrid);
     filmGrid.append(gridTitle, gridDetails, gridIcons, gridSynopsis, gridButton);
@@ -95,7 +89,12 @@ function generateFilmPageItemHtml(filmItem) {
     gridSynopsis.appendChild(synopsisElement)
     synopsisElement.appendChild(synopsisParagraph)
     gridButton.appendChild(filmpageButton)
-    filmpageButton.append(buyFilmButton, buyFilmButtonOnSale, priceBeforeElement)
+
+    if (filmItem.onSale) {
+        filmpageButton.append(buyFilmButtonOnSale, priceBeforeElement)
+    } else {
+        filmpageButton.appendChild(buyFilmButton)
+    }
 
 }
 
