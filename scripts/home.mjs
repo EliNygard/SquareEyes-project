@@ -1,3 +1,4 @@
+import { createCart } from "./utils/cart.mjs";
 import { API_FILM_URL } from "./common/constantsAPI.mjs";
 import { doFetch } from "./utils/doFetch.mjs";
 
@@ -60,6 +61,7 @@ async function renderHomePage() {
 }
 
 async function main() {
+    createCart();
     await renderHomePage();
 }
 
