@@ -7,19 +7,33 @@
 // create a clear cart button
 // message when cart is empty ✅
 
+import { getCart } from "./utils/cart.mjs"
 
 
-export function emptyCartMessage () {
+
+
+function generateEmptyCartMessage() {
+    const cartContainer = document.getElementById("cart")
+    
     const emptyCartElement = document.createElement("p")
+    emptyCartElement.classList.add("empty-cart-message")
     emptyCartElement.textContent = "You have no films in your cart. Go to our great film selection and find your next film to watch."
-    const cartDisplay = document.getElementById("cart")
-    cartDisplay.appendChild(emptyCartElement)
+    
+    const goToHomePage = document.createElement("a")
+    goToHomePage.classList.add("cta")
+    goToHomePage.href = "../index.html"
+    goToHomePage.textContent = "Find a new film"
+
+    const cart = getCart
+
+    if (!cart || cart.length === 0) {
+        cartContainer.append(emptyCartElement, goToHomePage)
+    }
+    
 }
 
-
-
-async function main() {
-    emptyCartMessage()
+function main() {
+    generateEmptyCartMessage()
 }
 
 main()
