@@ -9,9 +9,6 @@
 
 import { getCart } from "./utils/cart.mjs"
 
-
-
-
 function generateEmptyCartMessage() {
     const cartContainer = document.getElementById("cart")
     
