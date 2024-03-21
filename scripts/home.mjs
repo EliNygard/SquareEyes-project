@@ -2,6 +2,7 @@ import { createCart } from "./utils/cart.mjs";
 import { API_FILM_URL } from "./common/constantsAPI.mjs";
 import { doFetch } from "./utils/doFetch.mjs";
 
+
 // get the films ✅
 // get the filter criteria
 // filter based on genre
@@ -30,16 +31,29 @@ function generateFilmHtml(film) {
     imageElement.alt = film.image.alt;
     
 
-    const filmBuyButton = document.createElement('button')
-    filmBuyButton.classList.add('cta');
-    filmBuyButton.textContent = 'Buy Film'
-    filmBuyButton.addEventListener('click', () => {
+    const buyFilmButton = document.createElement('button')
+    buyFilmButton.classList.add('cta');
+    buyFilmButton.textContent = `Buy now for ${film.price} kr`
+    buyFilmButton.addEventListener('click', () => {
         console.log('id', film.id);
     });
-    
-    filmContainer.appendChild(imageElement);
-    filmWrapper.append(filmContainer, filmBuyButton);
 
+    const buyFilmButtonOnSale = document.createElement("button")
+    buyFilmButtonOnSale.classList.add("cta-on-sale", "cta")
+    buyFilmButtonOnSale.textContent = `Buy now for ${film.discountedPrice} kr`
+    buyFilmButtonOnSale.addEventListener('click', () => {
+        console.log('id', film.id);
+    });
+
+    filmContainer.appendChild(imageElement);
+    filmWrapper.append(filmContainer);
+
+    if (film.onSale) {
+        filmWrapper.append(buyFilmButtonOnSale)
+    } else {
+        filmWrapper.appendChild(buyFilmButton)
+    }
+    
     return filmWrapper;
 }
 
