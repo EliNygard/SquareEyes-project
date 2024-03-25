@@ -1,6 +1,7 @@
-import { createCart } from "./utils/cart.mjs";
+import { addToCart, createCart } from "./utils/cart.mjs";
 import { API_FILM_URL } from "./common/constantsAPI.mjs";
 import { doFetch } from "./utils/doFetch.mjs";
+
 
 
 // get the films ✅
@@ -34,24 +35,20 @@ function generateFilmHtml(film) {
     const buyFilmButton = document.createElement('button')
     buyFilmButton.classList.add('cta');
     buyFilmButton.textContent = `Buy now for ${film.price} kr`
-    buyFilmButton.addEventListener('click', () => {
-        console.log('id', film.id);
-    });
 
     const buyFilmButtonOnSale = document.createElement("button")
     buyFilmButtonOnSale.classList.add("cta-on-sale", "cta")
-    buyFilmButtonOnSale.textContent = `Buy now for ${film.discountedPrice} kr`
-    buyFilmButtonOnSale.addEventListener('click', () => {
-        console.log('id', film.id);
-    });
+    buyFilmButtonOnSale.textContent = `On Sale: Buy now for ${film.discountedPrice} kr`
 
     filmContainer.appendChild(imageElement);
     filmWrapper.append(filmContainer);
 
     if (film.onSale) {
         filmWrapper.append(buyFilmButtonOnSale)
+        buyFilmButtonOnSale.addEventListener('click', addToCart);
     } else {
         filmWrapper.appendChild(buyFilmButton)
+        buyFilmButton.addEventListener('click', addToCart)
     }
     
     return filmWrapper;

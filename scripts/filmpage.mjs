@@ -6,6 +6,7 @@
 // create if else statement to determine which button to display ✅
 
 import { amountSaved } from "./utils/amountSaved.mjs";
+import { addToCart } from "./utils/cart.mjs";
 
 
 const filmItem = JSON.parse(localStorage.getItem("film"));
@@ -73,6 +74,7 @@ function generateFilmPageItemHtml(filmItem) {
     const buyFilmButtonOnSale = document.createElement("button")
     buyFilmButtonOnSale.classList.add("cta-on-sale", "cta")
     buyFilmButtonOnSale.textContent = `Buy now for ${filmItem.discountedPrice} kr`
+
     const priceBeforeElement = document.createElement("p")
     priceBeforeElement.classList.add("price-on-sale")
     const savedAmount = amountSaved(filmItem)
@@ -92,8 +94,10 @@ function generateFilmPageItemHtml(filmItem) {
 
     if (filmItem.onSale) {
         filmpageButton.append(buyFilmButtonOnSale, priceBeforeElement)
+        buyFilmButtonOnSale.addEventListener('click', addToCart)
     } else {
         filmpageButton.appendChild(buyFilmButton)
+        buyFilmButton.addEventListener('click', addToCart)
     }
 
 }

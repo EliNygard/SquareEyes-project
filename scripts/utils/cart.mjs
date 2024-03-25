@@ -17,3 +17,17 @@ export function createCart() {
         localStorage.setItem('cart', JSON.stringify([]))
     }
 }
+
+
+// 1. check if film is added to cart
+//      if added, increment quantity by 1
+//      Else, add the film
+// 2. 
+export function addToCart(film) {
+    console.log("add to cart", film);
+    const cart = JSON.parse(localStorage.getItem('cart'))
+    cart.push(film)
+    console.log(cart);
+    localStorage.setItem('cart', JSON.stringify(cart))
+    
+}
