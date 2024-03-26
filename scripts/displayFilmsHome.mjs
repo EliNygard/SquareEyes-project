@@ -4,15 +4,22 @@
 
 import { addToCart } from "./utils/cart.mjs";
 
+let selectedGenre = "";
 
 export function displayFilms(films) {
     const filmsDisplayContainer = document.getElementById("js-films-container")
     filmsDisplayContainer.textContent = '';
     films
+        .filter ((film) => {
+            if (film.genre === selectedGenre || selectedGenre === "") {
+                return true;
+            }    
+    })
         .forEach((film) => {
             const filmHtml = generateFilmHtml(film);
             filmsDisplayContainer.appendChild(filmHtml);
         });
+        
 }
 
 function generateFilmHtml(film) {
