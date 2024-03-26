@@ -11,10 +11,9 @@ let selectedGenre = "";
 
 navGenreButtons.addEventListener('click', (event) => {
     if (event.target.id === "js-genre-action") {
-        console.log("action genre selected");
-        selectedGenre = "Action"
-        renderHomePage()
-
+        selectedGenre = "action"
+        console.log(selectedGenre);
+        
     } 
     else if (event.target.id === "js-genre-comedy") {
         console.log("comedy genre selected");
