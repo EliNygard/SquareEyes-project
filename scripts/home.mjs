@@ -1,4 +1,4 @@
-import { addToCart, createCart } from "./utils/cart.mjs";
+import { createCart } from "./utils/cart.mjs";
 import { API_FILM_URL } from "./common/constantsAPI.mjs";
 import { doFetch } from "./utils/doFetch.mjs";
 import { displayFilmSelectionMyFilms } from "./selectionMyFavoriteFilms.mjs";

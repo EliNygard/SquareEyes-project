@@ -2,6 +2,8 @@
 // link to filmpage ✅
 // css on film list at home ✅
 
+import { addToCart } from "./utils/cart.mjs";
+
 
 export function displayFilms(films) {
     const filmsDisplayContainer = document.getElementById("js-films-container")
