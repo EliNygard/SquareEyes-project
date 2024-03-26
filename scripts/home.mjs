@@ -44,11 +44,11 @@ function generateFilmHtml(film) {
     filmWrapper.append(filmContainer);
 
     if (film.onSale) {
-        filmWrapper.append(buyFilmButtonOnSale)
-        buyFilmButtonOnSale.addEventListener('click', addToCart);
+        filmWrapper.appendChild(buyFilmButtonOnSale)
+        buyFilmButtonOnSale.addEventListener('click', () => addToCart(film));
     } else {
         filmWrapper.appendChild(buyFilmButton)
-        buyFilmButton.addEventListener('click', addToCart)
+        buyFilmButton.addEventListener('click', () => addToCart(film));
     }
     
     return filmWrapper;
@@ -64,55 +64,47 @@ function displayFilms(films) {
         });
 }
 
-
-/* <div class="film-selection-container">
-                <h3 class="film-selection__heading">My films</h3>
-                <div class="image-scroller">
-                    <div class="img-element">
-                        
-                    </div>
-                    <div class="img-element">
-                        
-                    </div>
-                    <div class="img-element">
-                        
-                    </div>
-                    <div class="img-element">
-                        
-                    </div>
-                </div>
-            </div> */
-
-// generate scroller html
-// generate filmItem html
-// append filmItem to scroller html
+// get scroller ✅
+// generate filmItem html ✅
+// append filmItem favorite only to scroller html ✅
 
 function generateFilmSelectionHtml(film) {
-    const filmSelectionContainer = document.createElement("div")
-    filmSelectionContainer.classList.add("film-selection-container")
+    const imageContainer = document.createElement("div")
+    imageContainer.classList.add("img-element")
 
-    const heading = document.createElement("h3")
-    heading.classList.add("film-selection__heading")
-    heading.textContent = "My Films"
-
-    const imageScroller = document.createElement("div")
-    imageScroller.classList.add("image-scroller")
-
-    const filmContainer = document.createElement("a")
-    filmContainer.classList.add("-")
-    filmContainer.href = "html/filmpage.html"
-    filmContainer.addEventListener('click', () => {
+    const filmLinkElement = document.createElement("a")
+    filmLinkElement.href = "html/filmpage.html"
+    filmLinkElement.addEventListener('click', () => {
         localStorage.setItem('film', JSON.stringify(film))
     })
 
     const imageElement = document.createElement("img")
-    imageElement.classList.add("img-element")
+    imageElement.classList.add("film-image")
     imageElement.src = film.image.url
     imageElement.alt = film.image.alt
+
+    const contentContainer = document.createElement("div")
+    contentContainer.classList.add("film-selection-content")
+
+    const titleElement = document.createElement("p")
+    titleElement.classList.add("film-scroller")
+    titleElement.textContent = `${film.title}`
+
+    contentContainer.appendChild(titleElement)
+    filmLinkElement.append(imageElement, contentContainer)
+    imageContainer.appendChild(filmLinkElement)
+    
+    return imageContainer
 }
 
 function displayFilmSelectionMyFilms(films) {
-    //
+    const myFilmsScroller = document.getElementById("my-films-scroller")
+    films.forEach((film) => {
+        if (film.favorite === true) {
+            const filmHtml = generateFilmSelectionHtml(film)
+            myFilmsScroller.appendChild(filmHtml)
+        } 
+    })
 }
 
 

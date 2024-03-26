@@ -28,6 +28,5 @@ export function addToCart(film) {
     const cart = JSON.parse(localStorage.getItem('cart'))
     cart.push(film)
     console.log(cart);
-    localStorage.setItem('cart', JSON.stringify(cart))
-    
+    localStorage.setItem('cart', JSON.stringify(cart))  
 }

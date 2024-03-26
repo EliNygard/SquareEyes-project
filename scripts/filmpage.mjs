@@ -94,10 +94,10 @@ function generateFilmPageItemHtml(filmItem) {
 
     if (filmItem.onSale) {
         filmpageButton.append(buyFilmButtonOnSale, priceBeforeElement)
-        buyFilmButtonOnSale.addEventListener('click', addToCart)
+        buyFilmButtonOnSale.addEventListener('click', () => addToCart(filmItem));
     } else {
         filmpageButton.appendChild(buyFilmButton)
-        buyFilmButton.addEventListener('click', addToCart)
+        buyFilmButton.addEventListener('click', () => addToCart(filmItem));
     }
 
 }
