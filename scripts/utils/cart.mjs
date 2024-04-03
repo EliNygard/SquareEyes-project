@@ -30,3 +30,4 @@ export function addToCart(film) {
     console.log(cart);
     localStorage.setItem('cart', JSON.stringify(cart))  
 }
+

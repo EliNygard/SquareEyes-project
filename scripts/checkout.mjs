@@ -10,24 +10,31 @@
 import { getCart } from "./utils/cart.mjs"
 
 function generateEmptyCartMessage() {
-    const cartContainer = document.getElementById("cart")
+    const cartContainer = document.getElementById("cart-container")
     
     const emptyCartElement = document.createElement("p")
     emptyCartElement.classList.add("empty-cart-message")
     emptyCartElement.textContent = "You have no films in your cart. Go to our great film selection and find your next film to watch."
     
-    const goToHomePage = document.createElement("a")
-    goToHomePage.classList.add("cta")
-    goToHomePage.href = "../index.html"
-    goToHomePage.textContent = "Find a new film"
+    const goToHomePageButton = document.createElement("a")
+    goToHomePageButton.classList.add("cta")
+    goToHomePageButton.href = "../index.html"
+    goToHomePageButton.textContent = "Find a new film"
 
     const cart = getCart
 
     if (!cart || cart.length === 0) {
-        cartContainer.append(emptyCartElement, goToHomePage)
+        cartContainer.append(emptyCartElement, goToHomePageButton)
     }
     
 }
+
+function generateCartHtml(film) {
+
+
+}
+
+
 
 function main() {
     generateEmptyCartMessage()

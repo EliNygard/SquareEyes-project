@@ -5,10 +5,31 @@
     margin-bottom: 1rem;
 }
 
-.content_checkout > div > img {
-    max-width: 78%;
-    margin: 1rem auto;
+.cart-container {
+    display: grid;
+    grid-template-rows: auto;
+    margin: 2rem;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    margin: 2rem;
+
+}
+
+/* .info-element, .quantity-element {
+    width: 100px;
+} */
+
+.cart-image {
+    max-width: 200px;
     display: flex;
+}
+
+.cart-item .cta {
+    margin: 1rem;
 }
 
 .mobile-h1 {
