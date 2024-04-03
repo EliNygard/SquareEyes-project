@@ -21,19 +21,13 @@ function generateEmptyCartMessage() {
     goToHomePageButton.href = "../index.html"
     goToHomePageButton.textContent = "Find a new film"
 
-    const cart = getCart
+    const cart = getCart()
 
     if (!cart || cart.length === 0) {
         cartContainer.append(emptyCartElement, goToHomePageButton)
     }
     
 }
-
-function generateCartHtml(film) {
-
-
-}
-
 
 
 function main() {

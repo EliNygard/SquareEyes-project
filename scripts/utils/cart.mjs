@@ -19,15 +19,31 @@ export function createCart() {
 }
 
 
-// 1. check if film is added to cart
+// 1. check if film is added to cart ✅
 //      if added, increment quantity by 1
 //      Else, add the film
-// 2. 
+
 export function addToCart(film) {
     console.log("add to cart", film);
     const cart = JSON.parse(localStorage.getItem('cart'))
-    cart.push(film)
-    console.log(cart);
+    const itemIndex = cart.findIndex(function (currentFilm) {
+        if (film.id === currentFilm.id) {
+            return true;
+        }
+        return false;
+    });
+    if (itemIndex === -1) {
+        cart.push({ ...film, quantity: 1});
+    } else {
+      cart[itemIndex].quantity += 1;  
+    } 
     localStorage.setItem('cart', JSON.stringify(cart))  
 }
 
+
+
+
+function generateCartHtml(film) {
+    //
+    
+    }
