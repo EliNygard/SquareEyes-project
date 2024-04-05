@@ -34,7 +34,12 @@ navGenreButtons.addEventListener('click', (event) => {
 async function renderHomePage() {
     const responseData = await doFetch(API_FILM_URL);
     const films = responseData.data;
-    const paginatedFilms = paginate(films, 4);
+    let filmsPerPage = 6;
+
+    if (window.matchMedia('(max-width: 799px').matches) {
+        filmsPerPage = 3;
+    }
+    const paginatedFilms = paginate(films, filmsPerPage);
     displayFilms(paginatedFilms[0]);
     renderPagination(paginatedFilms);
     displayFilmSelectionMyFilms(films);
