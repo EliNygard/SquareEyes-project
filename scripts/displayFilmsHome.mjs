@@ -45,6 +45,8 @@ export function renderPagination(paginatedFilms) {
         const button = document.createElement('button');
         button.textContent = index + 1;
         button.classList.add('pagination-button')
+        button.title = "Previous page";
+        button.setAttribute("aria-label", "Previous Page");
         button.addEventListener('click', () => {
             filmContainer.innerHTML = '';
             displayFilms(page);
