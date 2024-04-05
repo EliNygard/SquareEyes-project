@@ -1,6 +1,9 @@
 .pagination-button {
-    background-color: var(--theme-color-accent);
-    color: var(--theme-color-light);
-    border: none;
+    background-color: var(--theme-color-light);
+    color: var(--theme-color-accent);
+    border-color: var(--theme-color-accent);
+    border: solid 2px;
+    padding: .4rem;
     margin: .5rem;
+    border-radius: 3px;
 }
