@@ -17,6 +17,9 @@
 //     }
 //   }
 
+
+// add loader
+
 export async function doFetch(url) {
     try {
         const response = await fetch(url);
@@ -26,3 +29,4 @@ export async function doFetch(url) {
         console.error("Could not fetch data from api", error);
     }
 };
+

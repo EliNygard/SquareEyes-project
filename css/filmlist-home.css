@@ -4,7 +4,8 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-    max-width: 1440px;
+    max-width: 960px;
+    margin: auto;
 }
 
 .film-wrapper {
