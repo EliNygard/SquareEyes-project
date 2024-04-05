@@ -1,0 +1,6 @@
+.pagination-button {
+    background-color: var(--theme-color-accent);
+    color: var(--theme-color-light);
+    border: none;
+    margin: .5rem;
+}

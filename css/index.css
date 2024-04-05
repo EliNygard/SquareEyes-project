@@ -18,5 +18,7 @@
 @import url("image_scroller.css");
 @import url("filmlist-home.css");
 
+@import url("pagination.css");
+
 /*media*/
 @import url("media.css");
