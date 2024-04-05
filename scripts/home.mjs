@@ -2,7 +2,8 @@ import { createCart } from "./utils/cart.mjs";
 import { API_FILM_URL } from "./common/constantsAPI.mjs";
 import { doFetch } from "./utils/doFetch.mjs";
 import { displayFilmSelectionMyFilms } from "./displayMyFavoriteFilms.mjs";
-import { displayFilms, paginate, renderPagination } from "./displayFilmsHome.mjs";
+import { displayFilms } from "./displayFilmsHome.mjs";
+import { paginate, renderPagination } from "./pagination.mjs";
 
 
 const navGenreButtons = document.getElementById("nav-genre-buttons")
