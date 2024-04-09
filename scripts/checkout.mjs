@@ -30,14 +30,33 @@ function generateEmptyCartMessage() {
 
 
 function generateCartHtml(film) {
-    const cartItem = document.createElement("div")
+    const cartItem = document.createElement("div");
+    cartItem.classList.add("cart-item")
+
+    const linkContainer = document.createElement("a")
     
     
     }
 
+function displayCartItems() {
+    const cartContainer = document.getElementById("#cart-container");
+    cartContainer.textContent = ''
+    const cart = JSON.parse(localStorage.getItem('cart'))
+
+    cart.forEach(function (currentItem) {
+        const itemHtml = generateCartHtml(currentItem)
+        cartContainer.appendChild(itemHtml)
+    })
+}
+
+function renderCheckoutPage() {
+    displayCartItems()
+}
+
 
 function main() {
     generateEmptyCartMessage()
+    renderCheckoutPage()
 }
 
 main()
