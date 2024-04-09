@@ -40,3 +40,16 @@ export function addToCart(film) {
     localStorage.setItem('cart', JSON.stringify(cart))  
 }
 
+export function getTotalNumberOfItemsInCart() {
+    const cart = getCart()
+    const getTotalNumberOfItemsInCart = cart.reduce((total, item) => {
+        total += item.quantity
+        return total
+    }, 0)
+    return getTotalNumberOfItemsInCart 
+}
+
+export function clearCart() {
+    localStorage.setItem("cart", JSON.stringify([]))
+    console.log("cart is cleared");
+}

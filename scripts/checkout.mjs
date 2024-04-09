@@ -7,7 +7,7 @@
 // message when cart is empty ✅
 
 import { amountSaved } from "./utils/amountSaved.mjs";
-import { getCart, addToCart } from "./utils/cart.mjs"
+import { getCart, addToCart, getTotalNumberOfItemsInCart } from "./utils/cart.mjs"
 
 function generateEmptyCartMessage() {
     const cartContainer = document.getElementById("cart-container")
@@ -30,7 +30,7 @@ function generateEmptyCartMessage() {
 }
 
 
-function generateCartHtml(filmItem) {
+function generateCartItemHtml(filmItem) {
     const cartItem = document.createElement("div");
     cartItem.classList.add("cart-item")
     
@@ -93,6 +93,7 @@ function generateCartHtml(filmItem) {
     removeItemBtn.classList.add("cta")
     removeItemBtn.textContent = "Remove"
 
+
     cartItem.append(linkContainer, infoContainer, quantityContainer, removeItemBtn)
     linkContainer.appendChild(imageElement)
     infoContainer.append(titleElement, priceElement)
@@ -107,13 +108,48 @@ function displayCartItems() {
     const cart = JSON.parse(localStorage.getItem("cart"))
 
     cart.forEach(currentItem => {
-        const itemHtml = generateCartHtml(currentItem)
+        const itemHtml = generateCartItemHtml(currentItem)
         cartContainer.appendChild(itemHtml)
     })
 }
 
+function generateCartTotalsHtml() {
+    const cartTotalsContainer = document.createElement("div")
+    cartTotalsContainer.classList.add("cart-totals")
+
+    const totalAmountElement = document.createElement("p")
+    totalAmountElement.classList.add("total-amount")
+    totalAmountElement.textContent = "Total"
+    // add total amount
+
+    const totalAmountSavedElement = document.createElement("p")
+    totalAmountSavedElement.classList.add("total-amount-saved")
+    totalAmountSavedElement.textContent = "Total saved"
+    // add total saved
+
+    const totalItemsElement = document.createElement("p")
+    totalItemsElement.classList.add("total-items")
+    const totalItems = getTotalNumberOfItemsInCart()
+    totalItemsElement.textContent = `Total items: ${totalItems}`
+
+    cartTotalsContainer.append(totalAmountElement, totalAmountSavedElement, totalItemsElement)
+
+    return cartTotalsContainer
+
+    
+}
+
+// clear cart function
+
+function displayCartDetails() {
+    const cartDetailsContainer = document.getElementById("cart-details-container")
+    const detailsHtml = generateCartTotalsHtml()
+    cartDetailsContainer.appendChild(detailsHtml)
+}
+
 function renderCheckoutPage() {
     displayCartItems()
+    displayCartDetails()
 }
 
 
