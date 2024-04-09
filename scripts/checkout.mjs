@@ -6,6 +6,7 @@
 // create a clear cart button
 // message when cart is empty ✅
 
+import { amountSaved } from "./utils/amountSaved.mjs";
 import { getCart, addToCart } from "./utils/cart.mjs"
 
 function generateEmptyCartMessage() {
@@ -29,7 +30,7 @@ function generateEmptyCartMessage() {
 }
 
 
-function generateCartHtml(film) {
+function generateCartHtml(filmItem) {
     const cartItem = document.createElement("div");
     cartItem.classList.add("cart-item")
     
@@ -38,25 +39,35 @@ function generateCartHtml(film) {
     
     const imageElement = document.createElement("img")
     imageElement.classList.add("cart-image")
-    imageElement.src = film.image.url
-    imageElement.alt = film.image.alt
+    imageElement.src = filmItem.image.url
+    imageElement.alt = filmItem.image.alt
 
     const infoContainer = document.createElement("div")
     infoContainer.classList.add("info-element")
 
     const titleElement = document.createElement("p")
     titleElement.classList.add("cart-item-title")
-    titleElement.textContent = film.title
+    titleElement.textContent = filmItem.title
 
     const priceElement = document.createElement("p")
     priceElement.classList.add("cart-item-price")
-    if (film.onSale) {
-        priceElement.textContent = `${film.discountedPrice} kr`
-        const priceBefore = document.createElement("p")
-        priceBefore.classList.add("cart-price-before")
-        priceBefore.textContent = `Before ${film.price} kr`
+    if (filmItem.onSale) {
+        priceElement.textContent = `${filmItem.discountedPrice} kr`
+        
+        const priceBeforeElement = document.createElement("p")
+        priceBeforeElement.classList.add("cart-price-before")
+        priceBeforeElement.textContent = `Before ${filmItem.price} kr`
+        
+        const amountSavedElement = document.createElement("p")
+        const savedAmount = amountSaved(filmItem)
+        amountSavedElement.classList.add("amount-saved")
+        amountSavedElement.textContent = `You save ${savedAmount}`
 
-        priceElement.appendChild(priceBefore)
+        priceElement.append(priceBeforeElement, amountSavedElement)
+    } else {
+        priceElement.textContent = `${filmItem.price} kr`
+
+
     }
 
     cartItem.append(linkContainer, infoContainer)
