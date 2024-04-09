@@ -1,7 +1,7 @@
-// generate html for cart items
+// generate html for cart items ✅
 //      button to remove item
-//      click image takes you to filmpage
-// display cart items
+//      click image takes you to filmpage ✅
+// display cart items ✅
 // update the container with the right amount of items
 // create a clear cart button
 // message when cart is empty ✅
@@ -36,11 +36,15 @@ function generateCartHtml(filmItem) {
     
     const linkContainer = document.createElement("a")
     linkContainer.href = "filmpage.html" 
+    linkContainer.addEventListener('click', () => {
+        localStorage.setItem('film', JSON.stringify(filmItem));
+    });
     
     const imageElement = document.createElement("img")
     imageElement.classList.add("cart-image")
     imageElement.src = filmItem.image.url
     imageElement.alt = filmItem.image.alt
+
 
     const infoContainer = document.createElement("div")
     infoContainer.classList.add("info-element")
@@ -66,13 +70,33 @@ function generateCartHtml(filmItem) {
         priceElement.append(priceBeforeElement, amountSavedElement)
     } else {
         priceElement.textContent = `${filmItem.price} kr`
-
-
     }
 
-    cartItem.append(linkContainer, infoContainer)
+
+    const quantityContainer = document.createElement("div")
+    quantityContainer.classList.add("quantity-element")
+
+    const quantityElement = document.createElement("p")
+    quantityElement.classList.add("cart-item-quantity")
+    quantityElement.textContent = `Quantity: ${filmItem.quantity}`
+
+    const increaseQuantityBtn = document.createElement("button")
+    increaseQuantityBtn.classList.add("change-quantity-btn")
+    increaseQuantityBtn.textContent = "+"
+
+    const decreaseQuantityBtn = document.createElement("button")
+    decreaseQuantityBtn.classList.add("change-quantity-btn")
+    decreaseQuantityBtn.textContent = "-"
+
+
+    const removeItemBtn = document.createElement("button")
+    removeItemBtn.classList.add("cta")
+    removeItemBtn.textContent = "Remove"
+
+    cartItem.append(linkContainer, infoContainer, quantityContainer, removeItemBtn)
     linkContainer.appendChild(imageElement)
     infoContainer.append(titleElement, priceElement)
+    quantityContainer.append(quantityElement, increaseQuantityBtn, decreaseQuantityBtn)
 
     return cartItem;
     }
