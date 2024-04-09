@@ -1,6 +1,6 @@
 // get cart ✅
 // create cart function ✅
-// add to cart function
+// add to cart function ✅
 // remove from cart function
 // clear cart function
 // get total numbers of items in cart function
@@ -20,8 +20,8 @@ export function createCart() {
 
 
 // 1. check if film is added to cart ✅
-//      if added, increment quantity by 1
-//      Else, add the film
+//      if added, increment quantity by 1 ✅
+//      Else, add the film ✅
 
 export function addToCart(film) {
     console.log("add to cart", film);
@@ -40,10 +40,3 @@ export function addToCart(film) {
     localStorage.setItem('cart', JSON.stringify(cart))  
 }
 
-
-
-
-function generateCartHtml(film) {
-    //
-    
-    }

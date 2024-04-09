@@ -27,6 +27,9 @@ export async function doFetch(url) {
         return json;
     } catch (error) {
         console.error("Could not fetch data from api", error);
+    } finally {
+        //
     }
 };
+
 

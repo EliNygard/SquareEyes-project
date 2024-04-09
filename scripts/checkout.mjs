@@ -2,12 +2,11 @@
 //      button to remove item
 //      click image takes you to filmpage
 // display cart items
-// calculate the number of items in the cart
 // update the container with the right amount of items
 // create a clear cart button
 // message when cart is empty ✅
 
-import { getCart } from "./utils/cart.mjs"
+import { getCart, addToCart } from "./utils/cart.mjs"
 
 function generateEmptyCartMessage() {
     const cartContainer = document.getElementById("cart-container")
@@ -28,6 +27,13 @@ function generateEmptyCartMessage() {
     }
     
 }
+
+
+function generateCartHtml(film) {
+    const cartItem = document.createElement("div")
+    
+    
+    }
 
 
 function main() {

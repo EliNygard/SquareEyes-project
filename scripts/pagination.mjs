@@ -13,6 +13,9 @@ export function paginate(films, filmsPerPage) {
     return pages;
 }
 
+// add next page og previous page buttons
+// style
+
 export function renderPagination(paginatedFilms) {
     const pagination = document.querySelector('.pagination');
     const filmContainer = document.querySelector('#js-films-container');
@@ -27,6 +30,9 @@ export function renderPagination(paginatedFilms) {
         button.addEventListener('click', () => {
             filmContainer.innerHTML = '';
             displayFilms(page);
+            const scrollToSection = document.querySelector('#js-films-container');
+            const offset = scrollToSection.offsetTop;
+            window.scrollTo({top: offset, behavior: 'smooth'});
         });
         pagination.append(button);
     });

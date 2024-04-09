@@ -36,9 +36,13 @@ async function renderHomePage() {
     const films = responseData.data;
     let filmsPerPage = 6;
 
-    if (window.matchMedia('(max-width: 799px').matches) {
+    if (window.matchMedia('(max-width: 799px)').matches) {
         filmsPerPage = 3;
     }
+    // if (window.matchMedia('(min-width: 800px)').matches) {
+    //     filmsPerPage = 4;
+    // }
+
     const paginatedFilms = paginate(films, filmsPerPage);
     displayFilms(paginatedFilms[0]);
     renderPagination(paginatedFilms);
