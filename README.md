@@ -1,2 +1,2 @@
 # SquareEyes-project
-The CAs merged into one project
+The CAs (Design, HTML/CSS and JS) merged into one project

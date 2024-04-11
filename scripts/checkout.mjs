@@ -7,7 +7,7 @@
 // message when cart is empty ✅
 
 import { amountSaved } from "./utils/amountSaved.mjs";
-import { getCart, addToCart, getTotalNumberOfItemsInCart } from "./utils/cart.mjs"
+import { getCart, addToCart, getTotalNumberOfItemsInCart, removeCartItem } from "./utils/cart.mjs"
 
 function generateEmptyCartMessage() {
     const cartContainer = document.getElementById("cart-container")
@@ -92,6 +92,7 @@ function generateCartItemHtml(filmItem) {
     const removeItemBtn = document.createElement("button")
     removeItemBtn.classList.add("cta")
     removeItemBtn.textContent = "Remove"
+    removeItemBtn.addEventListener('click', removeCartItem)
 
 
     cartItem.append(linkContainer, infoContainer, quantityContainer, removeItemBtn)

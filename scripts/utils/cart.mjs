@@ -5,6 +5,11 @@
 // clear cart function
 // get total numbers of items in cart function
 
+let cart = JSON.parse(localStorage.getItem("cart"));
+if (!cart) {
+    cart = [];
+};
+
 export function getCart() {
     const cart = JSON.parse(localStorage.getItem('cart'))
     console.log(cart);
@@ -39,6 +44,23 @@ export function addToCart(film) {
     } 
     localStorage.setItem('cart', JSON.stringify(cart))  
 }
+
+export function removeCartItem(event) {
+    const removeButton = event.target;
+    const cartItem = removeButton.closest('.cart-item').id
+    removeButton.closest('.cart-item').remove()
+    const itemToRemove = cart.findIndex(item => item.id === cartItem)
+    if (itemToRemove !== -1) {
+        cart.splice(itemToRemove, 1)
+        localStorage.setItem("cart", JSON.stringify(cart))
+
+    }
+}
+
+// function updateCartAndTotalPrice() {
+//     localStorage.setItem("cart", JSON.stringify(cart))
+//     totalAmountElement.textContent = updateCartTotal()
+// }
 
 export function getTotalNumberOfItemsInCart() {
     const cart = getCart()
