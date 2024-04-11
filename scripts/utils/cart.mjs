@@ -9,10 +9,12 @@ let cart = JSON.parse(localStorage.getItem("cart"));
 if (!cart) {
     cart = [];
 };
+console.log(cart); 
 
 export function getCart() {
     const cart = JSON.parse(localStorage.getItem('cart'))
-    console.log(cart);
+    console.log();
+    
     return cart
 }
 
@@ -30,7 +32,7 @@ export function createCart() {
 
 export function addToCart(film) {
     console.log("add to cart", film);
-    const cart = JSON.parse(localStorage.getItem('cart'))
+    // const cart = JSON.parse(localStorage.getItem('cart'))
     const itemIndex = cart.findIndex(function (currentFilm) {
         if (film.id === currentFilm.id) {
             return true;
@@ -53,17 +55,26 @@ export function removeCartItem(event) {
     if (itemToRemove !== -1) {
         cart.splice(itemToRemove, 1)
         localStorage.setItem("cart", JSON.stringify(cart))
-
     }
+    const totalItemsElement = document.getElementsByClassName('.total-items') 
+    totalItemsElement.textContent = getTotalNumberOfItemsInCart()
+    console.log(totalItemsElement);
+    
+    removeFromCartMessage()
 }
 
-// function updateCartAndTotalPrice() {
-//     localStorage.setItem("cart", JSON.stringify(cart))
-//     totalAmountElement.textContent = updateCartTotal()
-// }
+function removeFromCartMessage() {
+    const removeMessage = document.createElement("div");
+    removeMessage.classList.add("added-message");
+    removeMessage.textContent = "The film was removed from the cart";
+    document.body.appendChild(removeMessage);
+
+    setTimeout(() => {
+        removeMessage.remove();
+    }, 1500);
+};
 
 export function getTotalNumberOfItemsInCart() {
-    const cart = getCart()
     const getTotalNumberOfItemsInCart = cart.reduce((total, item) => {
         total += item.quantity
         return total

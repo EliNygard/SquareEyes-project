@@ -106,7 +106,8 @@ function generateCartItemHtml(filmItem) {
 function displayCartItems() {
     const cartContainer = document.getElementById("cart-container");
     cartContainer.textContent = '';
-    const cart = JSON.parse(localStorage.getItem("cart"))
+    // const cart = JSON.parse(localStorage.getItem("cart"))
+    const cart = getCart()
 
     cart.forEach(currentItem => {
         const itemHtml = generateCartItemHtml(currentItem)
@@ -151,11 +152,11 @@ function displayCartDetails() {
 function renderCheckoutPage() {
     displayCartItems()
     displayCartDetails()
+    generateEmptyCartMessage()
 }
 
 
 function main() {
-    generateEmptyCartMessage()
     renderCheckoutPage()
 }
 
